@@ -81,7 +81,7 @@ async function editar_alimento(id) {
     const getInput = (campo, valor_atual) => {
         const valor = prompt(`${campo}: `, valor_atual);
         if (valor == null){
-            alert('Operação Cancelada!');
+            //alert('Operação Cancelada!');
             return null;
         }
 
