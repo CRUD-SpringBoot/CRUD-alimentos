@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vendo todos os alimentos</title>
+    <script type="text/javascript" src="scripts/add_alimento.js"></script>
+</head>
+<body>
+    <h1>Let's add some new products on my database!</h1>
+
+    <!--Criando um forms para pegar os alimentos-->
+
+    <form name="formadd" id= "formadd" class="formadd">
+
+        <hr>
+
+        <div>
+            <label for="nome">Nome</label>
+            <input type="text" id="nome" name="nome" required>
+        </div>
+        <div>
+            <label for="categoria">Categoria</label>
+            <input type="text" id="categoria" name="categoria" required>
+        </div>
+        <div>
+            <label for="qtd_estoque">Qtd Estoque</label>
+            <input type="number" id="qtd_estoque" name="qtd_estoque" required>
+        </div>
+        <div>
+            <label for="preco">Preço</label>
+            <input type="number" id="preco" name="preco" required>
+        </div>
+        <div>
+            <label for="data_validade">Data de Validade</label>
+            <input type="date" id="data_validade" name="data_validade" required>
+        </div>
+        <div>
+            <label for="data_fabricacao">Data de Fabricação</label>
+            <input type="date" id="data_fabricacao" name="data_fabricacao" required>
+        </div>
+        <div>
+            <label for="peso_por_unidade">Peso por Unidade</label>
+            <input type="number" id="peso_por_unidade" name="peso_por_unidade" required>
+        </div>
+        <div>
+            <label for="marca">Marca</label>
+            <input type="text" id="marca" name="marca" required>
+        </div>
+        <div>
+            <label for="pais_origem">País de Origem</label>
+            <input type="text" id="pais_origem" name="pais_origem" required>
+        </div>
+        <div>
+            <label for="codigo_barras">Código de Barras</label>
+            <input type="number" id="codigo_barras" name="codigo_barras" required>
+        </div>
+
+        <hr>
+
+        <p>
+            <button type="submit" onclick="addAlimento(event)">Confirmar</button>
+        </p>
+    </form>
+
+    <p>
+        <a href="index.html">
+            <button>Voltar</button>
+        </a>
+    </p>
+</body>
+</html>
