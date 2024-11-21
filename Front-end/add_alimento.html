@@ -8,20 +8,19 @@
     <script type="text/javascript" src="scripts/add_alimento.js"></script>
 </head>
 <body>
+    <div class="row">
+        <div class="col d-flex justify-content-center mt-3">
+            <h1>Adicione Novos Alimentos</h1>
+        </div>
+    </div>
+    <hr>
+    
     <div class="container" style="width: 75%;">
         
-        
-        <div class="row">
-            <div class="col d-flex justify-content-center mt-3">
-                <h1>Adicione Novos Alimentos</h1>
-            </div>
-        </div>
-
-
         <!--Criando um forms para pegar os alimentos-->
         <form name="formadd" id= "formadd" class="formadd">
-            <hr>
-            <div class="row">
+            
+            <div class="row" style="margin-top: 45px;">
                 <div class="col-md-8">
                     <div class="col-6 input-group mb-3">
                         <span class="input-group-text" id="addon-wrapping">Nome</span>
@@ -72,11 +71,11 @@
                 </div>
          
                 <div class="col-md-4">
-                    <div class="d-flex justify-content-center mb-3">
-                        <button class="btn btn-outline-secondary m-3" type="submit" onclick="addAlimento(event)">Confirmar</button>
+                    <div class="d-flex justify-content-center ">
+                        <button class="btn btn-outline-secondary" type="submit" onclick="addAlimento(event)" style="margin-right: 30px;">Confirmar</button>
               
                         <a href="index.html">
-                            <button type="button" class="btn btn-outline-secondary m-3">Voltar</button>
+                            <button type="button" class="btn btn-outline-secondary">Voltar</button>
                         </a>
                     </div>
                 </div>
