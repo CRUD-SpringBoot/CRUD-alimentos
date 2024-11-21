@@ -3,6 +3,13 @@ function clearLoading(){
 }
 
 function showAlimentos(alimentos){
+    
+    if (alimentos.length === 0){
+        document.getElementById("alimentos").innerHTML = '<div style="text-align: center"><strong>(Nenhum Alimento foi Cadastrado)</strong></div>';
+        return; 
+        
+    }
+    
     let tab = ` <thead>
         <th>id</th>
         <th>Nome</th>
@@ -36,7 +43,9 @@ function showAlimentos(alimentos){
             </tr>
         `;
     }
+
     document.getElementById("alimentos").innerHTML = tab;
+
 }
 
 async function listAllAlimentos(){
