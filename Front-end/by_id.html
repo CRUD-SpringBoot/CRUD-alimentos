@@ -3,51 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bom dia</title>
+    <title>Consultar por ID</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="scripts/by_id.js"></script>
 </head>
 <body>
 
-    <div class="row">
-        <div class="col d-flex justify-content-center mt-3">
-            <h1>Consulte por ID</h1>
-        </div>
-    </div>
-    <hr>
-
-
-    <div class="container">
-        
-        <div class="container p-4" style="width: 500px;">
-            <div class="input-group">
-                <span class="input-group-text" id="addon-wrapping">Digite o ID</span>
-                <input type="number" class="form-control" placeholder="1" id="idAlimento">
-                <button type="button"  class="btn btn-outline-secondary " onclick="consultarPorId(event)">Consultar Alimento</button>
-            </div>
-        </div>
-        <div class="d-flex justify-content-center">
-            <div style="text-align: left; width: 300px;">
-                <hr>
-                <p id="vazio" style="text-align: center;">(Sem Resultados)</p>
-                <p id="nome"></p>
-                <p id="categoria"></p>
-                <p id="qtd_estoque"></p>
-                <p id="preco"></p>
-                <p id="data_validade"></p>
-                <p id="data_fabricacao"></p>
-                <p id="peso_por_unidade"></p>
-                <p id="marca"></p>
-                <p id="pais_origem"></p>
-                <p id="codigo_barras"></p>
-                <hr>
-            </div>
-        </div>
+    <div class="container-fluid">
         <div class="row">
-            <div class="col d-flex justify-content-center p-2">
-                <a href="index.html">
-                    <button type="button" class="btn btn-outline-secondary ">Voltar</button>
-                </a>
+            <div class="col d-flex justify-content-center mt-3">
+                <h1>Consulte por ID</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="container">
+        
+            <div class="container p-4" style="width: 500px;">
+                <div class="input-group">
+                    <span class="input-group-text" id="addon-wrapping">Digite o ID</span>
+                    <input type="number" class="form-control" placeholder="Ex: 1" id="idAlimento">
+                    <button type="button"  class="btn btn-outline-secondary " onclick="consultarPorId(event)">Consultar Alimento</button>
+                </div>
+            </div>
+            <div class="d-flex justify-content-center">
+                <div style="text-align: left; width: 300px;">
+                    <hr>
+                    <p id="vazio" style="text-align: center;">(Sem Resultados)</p>
+                    <p id="nome"></p>
+                    <p id="categoria"></p>
+                    <p id="qtd_estoque"></p>
+                    <p id="preco"></p>
+                    <p id="data_validade"></p>
+                    <p id="data_fabricacao"></p>
+                    <p id="peso_por_unidade"></p>
+                    <p id="marca"></p>
+                    <p id="pais_origem"></p>
+                    <p id="codigo_barras"></p>
+                    <hr>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col d-flex justify-content-center p-2">
+                    <a href="index.html">
+                        <button type="button" class="btn btn-outline-secondary ">Voltar</button>
+                    </a>
+                </div>
             </div>
         </div>
     </div>

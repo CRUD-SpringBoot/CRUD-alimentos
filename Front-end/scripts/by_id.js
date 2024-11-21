@@ -48,17 +48,22 @@ async function consultarPorId(event){
         return;
     }
 
-    //Pegando os dados
-    const dados = await fetch(`http://localhost:8080/alimento/list/${idAlimento}`);
+    //Conectando com o servidor para mostrar os dados
+    try{
 
-    //Mostrando os dados na página
-    if (dados.status == 200){
-        const alimento = await dados.json();
-        mostrarAlimento(alimento);
+        const dados = await fetch(`http://localhost:8080/alimento/list/${idAlimento}`);
 
-    }
-    else{
-        alert('ID: ' + idAlimento + ' não encontrado')
-        clear()
+        if (dados.status == 200){
+            const alimento = await dados.json();
+            mostrarAlimento(alimento);
+
+        }
+        else{
+            alert('ID: ' + idAlimento + ' não encontrado')
+            clear()
+        }
+
+    }catch(erro){
+        alert("Não foi possível conectar com o backend")
     }
 }

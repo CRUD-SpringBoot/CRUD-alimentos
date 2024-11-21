@@ -38,8 +38,8 @@ function showAlimentos(alimentos){
                 <td>${alimento.marca}</td>
                 <td>${alimento.pais_origem}</td>
                 <td>${alimento.codigo_barras}</td>
-                <td><img onclick="editar_alimento(${alimento.id})" src="images/edit01.png" width="20" height="15"></td>
-                <td><img onclick="remove_alimento(${alimento.id})" src="images/trash01.png" width="20" height="15"></td>
+                <td><img onclick="editar_alimento(${alimento.id})" src="images/edit02.png" width="21" style="cursor: pointer;"></td>
+                <td><img onclick="remove_alimento(${alimento.id})" src="images/trash02.png" width="21" style="cursor: pointer;"></td>
             </tr>
         `;
     }

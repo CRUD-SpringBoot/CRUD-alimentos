@@ -30,14 +30,21 @@ async function addAlimento(event) {
         body: JSON.stringify(alimento)
     }
 
-    const result = await fetch(url, options);
+    //Conectando com o servidor para pegar os dados
+    try{
 
-    if(result.status == 201){
-        location.reload()
-        alert('O alimento foi cadastrado com sucesso!');
-        
-    }
-    else{
-        alert('O alimento não foi cadastrado.');
+        const result = await fetch(url, options);
+
+        if(result.status == 201){
+            location.reload()
+            alert('O alimento foi cadastrado com sucesso!');
+            
+        }
+        else{
+            alert('O alimento não foi cadastrado.');
+        }
+
+    }catch(erro){
+        alert("Não foi possível conectar com o backend")
     }
 }
