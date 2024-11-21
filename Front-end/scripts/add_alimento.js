@@ -15,7 +15,7 @@ async function addAlimento(event) {
 
     //Verificando se todos os dados foram preenchidos
     if(!form.checkValidity()){
-        alert('Preencha todos os campos do formulário');
+        alert('Insira valores válidos para o cadastro');
         return;
     }
 
