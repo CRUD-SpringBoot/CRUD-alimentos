@@ -1,4 +1,0 @@
--------------------------------------------------------------------------------
-Test set: fatec.poo.crud_prod.CrudProdApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.606 s -- in fatec.poo.crud_prod.CrudProdApplicationTests

@@ -1,7 +1,5 @@
 package fatec.poo.crud_prod.entity;
 
-
-import fatec.poo.crud_prod.dto.ProdDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -57,19 +55,4 @@ public class Produto {
     @Column(name="codigo_de_barras",unique = true)
     private  Integer codigo_de_barras;
 
-    //Construtor para pegar os dados do DTO
-    public Produto(ProdDTO prodDTO){
-        this.Id = prodDTO.Id();
-        this.nome = prodDTO.nome();
-        this.categoria = prodDTO.categoria();
-        this.descricao = prodDTO.descricao();
-        this.preco = prodDTO.preco();
-        this.data_validade = prodDTO.data_validade();
-        this.data_fabricacao = prodDTO.data_fabricacao();
-        this.peso_por_unidade = prodDTO.peso_por_unidade();
-        this.qtd_estoque = prodDTO.qtd_estoque();
-        this.marca = prodDTO.marca();
-        this.pais_de_origem = prodDTO.pais_de_origem();
-        this.codigo_de_barras = prodDTO.codigo_de_barras();
-    }
 }
