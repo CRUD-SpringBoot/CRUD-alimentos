@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.util.Date;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
 @Table(name="produtos")
@@ -20,39 +21,39 @@ public class Produto {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int Id;
 
-    @Column(name="nome")
+    @Column
     private String nome;
 
-    @Column(name="categoria")
+    @Column
     private String categoria;
 
-    @Column(name="descricao")
+    @Column
     private String descricao;
 
-    @Column(name="preço")
+    @Column
     private Double preco;
 
-    @Column(name="qtd_estoque")
+    @Column
     private Integer qtd_estoque;
 
-    @Column(name="data_validade")
-    @Temporal(TemporalType.DATE)
+    @Column
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date data_validade;
 
-    @Column(name="data_fabricacao")
-    @Temporal(TemporalType.DATE)
+    @Column
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     private Date data_fabricacao;
 
-    @Column(name="peso_por_unidade")
+    @Column
     private  Double peso_por_unidade;
 
-    @Column(name="marca")
+    @Column
     private  String marca;
 
-    @Column(name="pais_de_origem")
-    private  String pais_de_origem;
+    @Column
+    private  String pais_origem;
 
-    @Column(name="codigo_de_barras",unique = true)
-    private  Integer codigo_de_barras;
+    @Column
+    private  Integer codigo_barras;
 
 }

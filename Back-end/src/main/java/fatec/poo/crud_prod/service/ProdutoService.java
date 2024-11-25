@@ -62,8 +62,8 @@ public class ProdutoService {
             existingProduct.setData_fabricacao(produto.getData_fabricacao());
             existingProduct.setPeso_por_unidade(produto.getPeso_por_unidade());
             existingProduct.setMarca(produto.getMarca());
-            existingProduct.setPais_de_origem(produto.getPais_de_origem());
-            existingProduct.setCodigo_de_barras(produto.getCodigo_de_barras());
+            existingProduct.setPais_origem(produto.getPais_origem());
+            existingProduct.setCodigo_barras(produto.getCodigo_barras());
             return produto_repository.save(existingProduct);
         }).orElseThrow(() -> new EntityNotFoundException("Não é possível atualizar. Produto não encontrado com o ID: " + produto.getId()));
     }
