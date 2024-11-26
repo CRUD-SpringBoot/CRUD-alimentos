@@ -55,7 +55,6 @@ public class ProdutoService {
         return produto_repository.findById(produto.getId()).map(existingProduct -> {
             existingProduct.setNome(produto.getNome());
             existingProduct.setCategoria(produto.getCategoria());
-            existingProduct.setDescricao(produto.getDescricao());
             existingProduct.setPreco(produto.getPreco());
             existingProduct.setQtd_estoque(produto.getQtd_estoque());
             existingProduct.setData_validade(produto.getData_validade());

@@ -28,9 +28,6 @@ public class Produto {
     private String categoria;
 
     @Column
-    private String descricao;
-
-    @Column
     private Double preco;
 
     @Column
