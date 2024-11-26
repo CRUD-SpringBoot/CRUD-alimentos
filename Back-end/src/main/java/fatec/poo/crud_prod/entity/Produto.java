@@ -10,7 +10,7 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonFormat;
 
 @Entity
-@Table(name="produtos")
+@Table(name="alimentos")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -34,11 +34,11 @@ public class Produto {
     private Integer qtd_estoque;
 
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
     private Date data_validade;
 
     @Column
-    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
+    @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM-dd-yyyy")
     private Date data_fabricacao;
 
     @Column
