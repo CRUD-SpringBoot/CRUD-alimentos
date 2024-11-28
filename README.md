@@ -55,7 +55,7 @@
 Use o comando abaixo para clonar este projeto
 
 ```bash
-git clone https://github.com/joao72neto/CRUD-Alimentos
+git clone https://github.com/CRUD-SpringBoot/CRUD-alimentos
 ```
 # Colaborador
 
