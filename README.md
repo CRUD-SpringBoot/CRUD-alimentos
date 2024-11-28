@@ -12,8 +12,12 @@
 </h2>
 
 <p align="left">
-    Programa feito para a disciplina de POO, o qual consiste de um sistema CRUD que usa conceito básicos e fundamentais da orientação objeto (herança, polimorfismo, encapsulamento, interfaces...). A conexão com o banco de   
-    dados foi feita no Oracle Express 21c usando o drive JDBC respectivo.
+    Aplicação Front-end Back-end para cadastramento de alimentos utilizando arquitetura MVC e API rest. 
+    O seu desenvolvimento foi feito para entender o fluxo de desenvolvimento usando o framework Spring Boot como parte da disciplina de POO
+</p>
+
+<p>
+    Confira abaixo a demonstração do funcionamento da função que consulta todos os alimentos cadastrados no banco de dados:
 </p>
 
 
@@ -23,57 +27,28 @@
 
 <h2 id="tech">💻 Tecnologias</h2>
 
-- JAVA
+- JAVA - Spring Boot
 - SQL / ORACLE
-- BATCHFILE
+- HTML5
+- Bootstrap
+- JavaScript
 
-- <h2 id="started">🚀 Primeiros Passos</h2>
+## Endpoints
+
+| Método HTTP | Endpoint                | Descrição                 |
+|-------------|-------------------------|---------------------------|
+| GET         | `/alimento/listall`     | Consultar todos os alimentos. |
+| GET         | `/alimento/list/{id}`   | Consultar alimento por ID.    |
+| DELETE      | `/alimento/delete/{id}` | Deletar alimento pelo ID.     |
+| PUT         | `/alimento/update`      | Atualizar dados de um alimento. |
+| POST        | `/alimento/add`         | Inserir um novo alimento.      |
+
+
+<h2 id="started">🚀 Primeiros Passos</h2>
 
 <h3>Pré-Requisitos</h3>
 
  - [ORACLE 21c](https://www.oracle.com/br/database/technologies/xe-downloads.html)
-
-<h3>Estrutura do Banco</h3>
-
-- Tabela
-
-```SQL
-CREATE TABLE ALIMENTOS (
-    alm_id                 int constraint ck_alm_01 not null,                           
-    alm_nome               VARCHAR2(100) constraint ck_alm_02 not null,                  
-    alm_categoria          VARCHAR2(50) constraint ck_alm_03 not null,                  
-    alm_quantidade_estoque NUMBER(10, 2),                           
-    alm_preco              NUMBER(10, 2),                           
-    alm_data_validade      DATE,                                    
-    alm_data_fabricacao    DATE,                                    
-    alm_peso_por_unidade   NUMBER(10, 2),                           
-    alm_marca              VARCHAR2(50),                           
-    alm_pais_origem        VARCHAR2(50),                            
-    alm_codigo_barras      VARCHAR2(20),                           
-    PRIMARY KEY (alm_id)                                  
-);
-```
-- Sequence
-
-```SQL
-create sequence alm_sq nocache;
-```
-
-- Trigger
-  
-```SQL
-create trigger alm_tg_sq
-before insert on alimentos
-for each row
-begin 
-    :new.alm_id := alm_sq.nextval;
-    
-end;
-/
-```
-
-Com o Oracle instalado e a estrutura do banco criada, você pode dar 2 cliques no arquivo "compilar.bat" para compilar o programa
-e logo após "rodar.bat" para iniciá-lo
 
 <h3>Clonagem</h3>
 
@@ -82,3 +57,19 @@ Use o comando abaixo para clonar este projeto
 ```bash
 git clone https://github.com/joao72neto/CRUD-Alimentos
 ```
+# Colaborador
+
+Abaixo, encontra-se o GitHub do parceiro que ajudou a confeccionar o projeto:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Joao-Vitor-da-Costa-Vieira">
+        <img src="https://avatars.githubusercontent.com/u/153871810?s=100&v=4" width="100px;" alt="João Vitor GitHub"/><br>
+        <sub>
+          <b>João Vitor</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
